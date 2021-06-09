@@ -57,7 +57,7 @@ class LoginController extends Controller
                  }
                  if (auth()->user()-> is_admin ==1) 
                  {
-                     return redirect()->route('teacher.home');
+                     return redirect()->route('student.home');
                   }
                 else
                 {

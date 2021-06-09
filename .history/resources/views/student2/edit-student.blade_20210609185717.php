@@ -16,21 +16,13 @@
 
 </head>
 
-<body>
-    <form method="post" action="{{ route('teacher.update', $student->id) }}">
+<div class="card-deck">
+    <div class="card bg-primary">
+        <div class="card-body text-center">
 
-        @csrf
-        @method("put")
-        <div class="container">
-            <h2>edit student</h2>
-
-            <div class="card-deck">
-                <div class="card bg-primary">
-                    <div class="card-body text-center">
-
-                        <div class="form-group">
-                            <label for="usr">e_no:</label>
-                            <input type="text" class="form-control" value="<?= $student->e_no ?>" name='e_no' placeholder="Enter e_no">
+            <div class="form-group">
+                <label for="usr">e_no:</label>
+                <input type="text" class="form-control" value="<?= $student->e_no ?>" name='e_no' placeholder="Enter e_no">
                   </div>
                         <div class="form-group">
                             <label for="usr">Name:</label>
@@ -70,7 +62,8 @@
                       
                       <input type="submit" value="Submit" ><br><br>
                       {{-- <button><a href="{{route('mark')}}">Show mark list</a></button> --}}
-                     </div>
+                      {{-- <button><a href="{{route('addstudentlist.list')}}">Show student list</a></button> --}}
+                    </div>
                   </div>
               </div>
             </div>

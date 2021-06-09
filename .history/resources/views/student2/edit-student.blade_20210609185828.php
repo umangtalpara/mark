@@ -70,7 +70,7 @@
                       
                       <input type="submit" value="Submit" ><br><br>
                       {{-- <button><a href="{{route('mark')}}">Show mark list</a></button> --}}
-                     </div>
+ </div>
                   </div>
               </div>
             </div>

@@ -22,14 +22,16 @@ use App\Http\Controllers\MarkController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/student-list', function () {
+    return view('teacher.student-list');
+});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-Route::get('/teacher/home', [App\Http\Controllers\HomeController::class, 'teacherHome'])->name('teacher.home')->middleware('is_admin');
-
+Route::get('/teacher/home', [App\Http\Controllers\HomeController::class, 'teacherHome'])->name('student')->middleware('is_admin');
+Route::get('/student-liist', [App\Http\Controllers\HomeController::class, 'studentlist'])->name('student.list');
 
 Route::resource('teacher',TeacherController::class);
 Route::resource('semester',SemesterController::class);

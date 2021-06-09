@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Student;
 
 use Illuminate\Http\Request;
 
@@ -28,19 +27,15 @@ class HomeController extends Controller
     }
     public function teacherHome()
     {
-        return view('teacher');
+        return view('teacher.index');
     }
     public function adminHome()
     {
         return view('admin');
     }
 
-    // public function studentlist()
-    // {
-       
-    //     $all_students = Student::all();
-    //     return view('teacher.student-list', [
-    //         "students" => $all_students
-    //     ]);
-    // }
+    public function studentlist()
+    {
+        return view('teacher.student-list');
+    }
 }

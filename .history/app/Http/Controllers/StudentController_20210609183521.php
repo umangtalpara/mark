@@ -16,11 +16,11 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $all_students = Student::all();
-        return view('student2.index', [
-            "students" => $all_students
-        ]);
-        // return view('teacher');
+        // $all_students = Student::all();
+        // return view('teacher.index', [
+        //     "students" => $all_students
+        // ]);
+        return view('teacher');
     }
 
     /**
@@ -55,7 +55,7 @@ class StudentController extends Controller
         $student->save();
 
         // $request->session()->flash("success",'todo has been added');
-        return redirect('/student');
+        return redirect('/teacher');
     }
 
     /**

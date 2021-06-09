@@ -28,19 +28,19 @@ class HomeController extends Controller
     }
     public function teacherHome()
     {
-        return view('teacher');
+        return view('teacher.index');
     }
     public function adminHome()
     {
         return view('admin');
     }
 
-    // public function studentlist()
-    // {
+    public function studentlist()
+    {
        
-    //     $all_students = Student::all();
-    //     return view('teacher.student-list', [
-    //         "students" => $all_students
-    //     ]);
-    // }
+        $all_students = Student::all();
+        return view('teacher.student-list', [
+            "students" => $all_students
+        ]);
+    }
 }

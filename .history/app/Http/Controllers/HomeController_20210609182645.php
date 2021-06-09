@@ -35,12 +35,12 @@ class HomeController extends Controller
         return view('admin');
     }
 
-    // public function studentlist()
-    // {
+    public function studentlist()
+    {
        
-    //     $all_students = Student::all();
-    //     return view('teacher.student-list', [
-    //         "students" => $all_students
-    //     ]);
-    // }
+        $all_students = Student::all();
+        return view('teacher.student-list', [
+            "students" => $all_students
+        ]);
+    }
 }
