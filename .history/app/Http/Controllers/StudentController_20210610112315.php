@@ -94,7 +94,7 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        dd($id);
         //
         $student = Student::find($id); 
         $student->e_no = $request->e_no;

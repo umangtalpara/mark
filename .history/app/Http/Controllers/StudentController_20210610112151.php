@@ -77,7 +77,6 @@ class StudentController extends Controller
      */
     public function edit(Student $student, $id)
     { 
-       
         {
             $student = Student::find($id);
             return view('student2.edit-student', [
@@ -94,7 +93,6 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         //
         $student = Student::find($id); 
         $student->e_no = $request->e_no;

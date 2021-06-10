@@ -16,8 +16,8 @@ class TeacherController extends Controller
     public function index()
     {
         $all_teachers = Teacher::all();
-        return view('teacher.index', [
-            "teachers" => $all_teachers
+        return view('student2.index', [
+            "students" => $all_teachers
         ]);
         // return view('teacher');
     }
@@ -30,7 +30,7 @@ class TeacherController extends Controller
     public function create()
     {
         //
-        return view('teacher.add-teacher');
+        return view('admin.add-teacher');
     }
 
     /**
@@ -76,12 +76,6 @@ class TeacherController extends Controller
     public function edit($id)
     {
         //
-        {
-            $teacher = Teacher::find($id);
-            return view('teacher.edit-teacher', [
-                "teacher" => $teacher
-            ]);
-        }
     }
 
     /**

@@ -41,9 +41,9 @@
                     <td>{{ $teacher->mobile }}</td>
                     <td>{{ $teacher->dob }}</td>
                     <td>{{ $teacher->address }}</td>
-                    <td><a href="{{ route('teacher.edit', $teacher->id) }}" class="btn btn-info"> edit </a></td>
+                    <td><a href="{{ route('student.edit', $student->id) }}" class="btn btn-info"> edit </a></td>
                     <td>
-                        <form action="{{ route('teacher.destroy', $teacher->id) }}" method="post">
+                        <form action="{{ route('student.destroy', $student->id) }}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete </button>

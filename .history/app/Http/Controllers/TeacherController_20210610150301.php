@@ -76,12 +76,6 @@ class TeacherController extends Controller
     public function edit($id)
     {
         //
-        {
-            $teacher = Teacher::find($id);
-            return view('teacher.edit-teacher', [
-                "teacher" => $teacher
-            ]);
-        }
     }
 
     /**

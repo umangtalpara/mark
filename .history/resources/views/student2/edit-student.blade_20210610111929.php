@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <form method="post" action="{{ route('student.update', $student->id) }}">
+    <form method="post" action="{{ route('teacher.update', $student->id) }}">
 
         @csrf
         @method("put")

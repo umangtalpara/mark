@@ -77,7 +77,6 @@ class StudentController extends Controller
      */
     public function edit(Student $student, $id)
     { 
-       
         {
             $student = Student::find($id);
             return view('student2.edit-student', [
@@ -94,7 +93,6 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
         //
         $student = Student::find($id); 
         $student->e_no = $request->e_no;
@@ -108,7 +106,7 @@ class StudentController extends Controller
         $student->save();
 
         $request->session()->flash("success", "student updated successfully");
-        return redirect("student");
+        return redirect("teacher");
     }
 
     /**
@@ -120,9 +118,9 @@ class StudentController extends Controller
 
     public function destroy($id)
     {
-        
+        dd($id);
         $student = Student::find($id);
         $student->delete();
-        return redirect()->route('student.index')->with("success", " student deleteed successfully");
+        return redirect()->route('teacher.index')->with("success", " student deleteed successfully");
     }
 }

@@ -10,16 +10,16 @@
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
-    <title>add-teacher</title>
+    <title>add-student</title>
 </head>
 
 <body>
 
-    <h4><a style="float: right " href={{ route('teacher.create') }}>Add new teacher</a></h4>
+    <h4><a style="float: right " href={{ route('student.create') }}>Add new student</a></h4>
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">f_no</th>
+                <th scope="col">e_no</th>
                 <th scope="col">name</th>
                 <th scope="col">email</th>
                 <th scope="col">password</th>
@@ -32,18 +32,18 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($teachers as $teacher)
+            @foreach ($students as $student)
                 <tr>
-                    <th>{{ $teacher->f_no }}</th>
-                    <td>{{ $teacher->name }}</td>
-                    <td>{{ $teacher->email }}</td>
-                    <td>{{ $teacher->password }}</td>
-                    <td>{{ $teacher->mobile }}</td>
-                    <td>{{ $teacher->dob }}</td>
-                    <td>{{ $teacher->address }}</td>
-                    <td><a href="{{ route('teacher.edit', $teacher->id) }}" class="btn btn-info"> edit </a></td>
+                    <th>{{ $student->e_no }}</th>
+                    <td>{{ $student->name }}</td>
+                    <td>{{ $student->email }}</td>
+                    <td>{{ $student->password }}</td>
+                    <td>{{ $student->mobile }}</td>
+                    <td>{{ $student->dob }}</td>
+                    <td>{{ $student->address }}</td>
+                    <td><a href="{{ route('student.edit', $student->id) }}" class="btn btn-info"> edit </a></td>
                     <td>
-                        <form action="{{ route('teacher.destroy', $teacher->id) }}" method="post">
+                        <form action="{{ route('student.destroy', $student->id) }}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete </button>
