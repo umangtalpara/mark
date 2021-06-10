@@ -20,7 +20,6 @@
     <form method="post" action="{{ route('teacher.update', $teacher->id) }}">
         {{-- <form method="post" href="{{route('teacher.add-student')}}> --}}
         @csrf
-        @method("put")
         <div class="container">
             <h2>edit teacher</h2>
 

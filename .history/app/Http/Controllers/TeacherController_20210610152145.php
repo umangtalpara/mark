@@ -93,19 +93,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $teacher = Teacher::find($id); 
-        $teacher->f_no = $request->f_no;
-        $teacher->name = $request->name;
-        $teacher->email = $request->email;
-        $teacher->password =Hash::make($request->password); 
-        $teacher->mobile = $request->mobile;
-        $teacher->dob = $request->dob;
-        $teacher->address = $request->address;
-
-        $teacher->save();
-
-        // $request->session()->flash("success",'todo has been added');
-        return redirect('/teacher');
+        //
     }
 
     /**
@@ -119,6 +107,6 @@ class TeacherController extends Controller
         //
         $teacher = Teacher::find($id);
         $teacher->delete();
-        return redirect()->route('teacher.index')->with("success", " teacher deleteed successfully");
+        return redirect()->route('student.index')->with("success", " teacher deleteed successfully");
     }
 }

@@ -93,7 +93,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $teacher = Teacher::find($id); 
+        $teacher = new Teacher();
         $teacher->f_no = $request->f_no;
         $teacher->name = $request->name;
         $teacher->email = $request->email;

@@ -12,16 +12,17 @@
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link href=" https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
         rel="stylesheet" type="text/css" />
-    <title>add-teacher</title>
+    <title>edit-teacher</title>
 
 </head>
 
 <body>
-    <form method="post" action="{{ route(''teacher.update', $teacher->id) }}">
+    <form method="put" action="{{ route('teacher.update', $teacher->id) }}">
         {{-- <form method="post" href="{{route('teacher.add-student')}}> --}}
         @csrf
+        @method("put")
         <div class="container">
-            <h2>add teacher</h2>
+            <h2>edit teacher</h2>
 
             <div class="card-deck">
                 <div class="card bg-primary">
@@ -56,12 +57,12 @@
                             <label for="usr">DOB:</label>
                             <!--Date picker -->
                             <input id="datepicker" name="dob" value="<?= $teacher->dob ?>" placeholder=" Enter DOB" width="437" />
-                            // <script>
-                            //     $('#datepicker').datepicker({
-                            //   uiLibrary: 'bootstrap4'
-                            //     });
+                            <script>
+                                $('#datepicker').datepicker({
+                              uiLibrary: 'bootstrap4'
+                                });
 
-                            // </script>
+                             </script>
                         </div>
 
                         <div class="form-group">
