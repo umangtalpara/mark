@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use App\Http\Controllers\Student;
 use App\Models\Student;
 
 class JointableController extends Controller

@@ -62,6 +62,7 @@
                     <input type="text" class="form-control" value=" <?= $mark->avg ?>" name='avg'  placeholder=" Enter avg mark">
                   </div>
 
+                  
                   <input type="submit" value="Submit" ><br>
                 </div>
               </div>

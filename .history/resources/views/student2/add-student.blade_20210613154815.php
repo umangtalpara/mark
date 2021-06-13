@@ -12,16 +12,16 @@
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link href=" https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
         rel="stylesheet" type="text/css" />
-    <title>add-teacher</title>
+    <title>add-student</title>
 
 </head>
 
 <body>
-    <form method="post" action="{{ route('teacher.store') }}">
+    <form method="post" action="{{ route('student.store') }}">
         {{-- <form method="post" href="{{route('teacher.add-student')}}> --}}
         @csrf
         <div class="container">
-            <h2>add teacher</h2>
+            <h2>add student</h2>
 
             <div class="card-deck">
                 <div class="card bg-primary">
@@ -29,8 +29,8 @@
 
 
                         <div class="form-group">
-                            <label for="usr">f_no:</label>
-                            <input type="text" class="form-control" name='f_no' placeholder="Enter f_no">
+                            <label for="usr">e_no:</label>
+                            <input type="int" class="form-control" name='e_no' placeholder="Enter e_no">
                         </div>
                         <div class="form-group">
                             <label for="usr">Name:</label>
@@ -70,7 +70,8 @@
                         </div>
 
                         <input type="submit" value="Submit"><br><br>
-
+                        <button><a href="{{ route('student2.index') }}">Show student list</a></button>
+                        {{-- <button><a href="{{route('addstudentlist.list')}}">Show student list</a></button> --}}
                     </div>
                 </div>
             </div>

@@ -12,65 +12,66 @@
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <link href=" https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
         rel="stylesheet" type="text/css" />
-    <title>add-teacher</title>
+    <title>edit-teacher</title>
 
 </head>
 
 <body>
-    <form method="post" action="{{ route('teacher.store') }}">
-        {{-- <form method="post" href="{{route('teacher.add-student')}}> --}}
+    <form method="post" action="{{ route('teacher.update', $teacher->id) }}">
+
         @csrf
+        @method("put")
         <div class="container">
-            <h2>add teacher</h2>
+            <h2>edit teacher</h2>
 
             <div class="card-deck">
                 <div class="card bg-primary">
                     <div class="card-body text-center">
 
-
                         <div class="form-group">
                             <label for="usr">f_no:</label>
-                            <input type="text" class="form-control" name='f_no' placeholder="Enter f_no">
+                            <input type="text" class="form-control" value="<?= $teacher->f_no ?>" name='f_no' placeholder="Enter f_no">
                         </div>
                         <div class="form-group">
                             <label for="usr">Name:</label>
-                            <input type="text" class="form-control" name='name' placeholder="Enter Name">
+                            <input type="text" class="form-control" value="<?= $teacher->name ?>" name='name' placeholder="Enter Name">
                         </div>
 
                         <div class="form-group">
                             <label for="usr">Email:</label>
-                            <input type="email" class="form-control" name='email' placeholder="Enter email">
+                            <input type="email" class="form-control" value="<?= $teacher->email ?>" name='email' placeholder="Enter email">
                         </div>
 
                         <div class="form-group">
                             <label for="usr">Password:</label>
-                            <input type="password" class="form-control" name='password' placeholder="Enter password">
+                            <input type="password" class="form-control" value="<?= $teacher->password ?>" name='password' placeholder="Enter password">
                         </div>
 
                         <div class="form-group">
                             <label for="usr">Mobile_no:</label>
-                            <input type="text" class="form-control" name='mobile' placeholder=" Enter mobile-no">
+                            <input type="text" class="form-control" value="<?= $teacher->mobile ?>" name='mobile' placeholder=" Enter mobile-no">
                         </div>
 
                         <div class="form-group">
                             <label for="usr">DOB:</label>
                             <!--Date picker -->
-                            <input id="datepicker" name="dob" placeholder=" Enter DOB" width="437" />
+                            <input id="datepicker" name="dob" value="<?= $teacher->dob ?>" placeholder=" Enter DOB" width="437" />
                             <script>
                                 $('#datepicker').datepicker({
-                                    uiLibrary: 'bootstrap4'
+                              uiLibrary: 'bootstrap4'
                                 });
 
-                            </script>
+                             </script>
                         </div>
 
                         <div class="form-group">
                             <label for="usr">Address:</label>
-                            <input type="text" class="form-control" name='address' placeholder=" Enter address">
+                            <input type="text" class="form-control" value="<?= $teacher->address ?>" name='address' placeholder=" Enter address">
                         </div>
 
                         <input type="submit" value="Submit"><br><br>
-
+                        {{-- <button><a href="{{ route('mark.index') }}">Show mark list</a></button> --}}
+                        {{-- <button><a href="{{route('addstudentlist.list')}}">Show student list</a></button> --}}
                     </div>
                 </div>
             </div>

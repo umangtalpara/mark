@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Student;
 
 use Illuminate\Http\Request;
@@ -25,12 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        
         $student = Student::find(3);
-        $marks = $student->marks;
-        return view('home', [
-            "marks" => $marks
-        ]);
+             $marks= $student->marks;
+                return view('home', [
+                "marks" => $marks
+            ]);
     }
     public function teacherHome()
     {
@@ -40,4 +39,13 @@ class HomeController extends Controller
     {
         return view('admin');
     }
+
+    // public function studentlist()
+    // {
+       
+    //     $all_students = Student::all();
+    //     return view('teacher.student-list', [
+    //         "students" => $all_students
+    //     ]);
+    // }
 }
