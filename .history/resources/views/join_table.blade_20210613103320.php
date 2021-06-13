@@ -19,31 +19,31 @@
                                 {{-- @foreach ($students as $student) --}}
                                 {{-- <tr>
                                     <td>student_id</td>
-                                    <td>{{ $student->student_id }}</td> --}}
-                                <tr>
-                                    <td>sub1</td>
-                                    <td>{{ $student }}</td>
+                                    <td>{{ $student->student_id }}</td>
+                                <tr> --}}
+                                <td>sub1</td>
+                                <td>{{ $students->sub1 }}</td>
                                 </tr>
-                                {{-- <tr>
+                                <tr>
                                     <td>sub2</td>
-                                    <td>{{ value = "<?= $student->sub2 ?>" }}</td>
-                                </tr> --}}
-                                {{-- <tr>
+                                    <td>v{{ $students->sub2 }}</td>
+                                </tr>
+                                <tr>
                                     <td>sub3</td>
-                                    <td>{{ $student->sub3 }}< /td>
+                                    <td>{{ $students->sub3 }}< /td>
                                 </tr>
                                 <tr>
                                     <td>sub4</td>
-                                    <td>{{ $student->sub4 }}</td>
+                                    <td>{{ $students->sub4 }}</td>
                                 </tr>
                                 <tr>
                                     <td>total</td>
-                                    <td>{{ $student->total }}</td>
+                                    <td>{{ $students->total }}</td>
                                 </tr>
                                 <tr>
                                     <td>avg</td>
-                                    <td>{{ $student->avg }}</td>
-                                </tr> --}}
+                                    <td>{{ $students->avg }}</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

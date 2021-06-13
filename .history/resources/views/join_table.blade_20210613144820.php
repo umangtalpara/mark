@@ -22,7 +22,7 @@
                                     <td>{{ $student->student_id }}</td> --}}
                                 <tr>
                                     <td>sub1</td>
-                                    <td>{{ $student }}</td>
+                                    <td>{{ $student->total }}</td>
                                 </tr>
                                 {{-- <tr>
                                     <td>sub2</td>

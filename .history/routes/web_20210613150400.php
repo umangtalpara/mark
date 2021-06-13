@@ -13,7 +13,7 @@ use App\Http\Controllers\JointableController;
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('home', [JointableController::class, 'index']);
+Route::get('home', [JointableController::class, 'index']);
 
 Auth::routes();
 
