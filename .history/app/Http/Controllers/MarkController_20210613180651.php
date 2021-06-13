@@ -96,7 +96,7 @@ class MarkController extends Controller
     {
         //
         $mark =Mark::find($id);
-        $mark->student_id =$request->student_id;
+        $mark->e_no =$request->e_no;
         $mark->sub1=$request->sub1;
         $mark->sub2=$request->sub2;
         $mark->sub3=$request->sub3;
